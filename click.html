@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+    .text-container{
+      color: blue;
+      font-weight: 700;
+      font-size: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .btn-container{
+      display:flex;
+      justify-content: center;
+     align-items: center;
+    margin-top: 4rem;
+    }
+    #btn1 , #btn2{
+      box-shadow: 0 0 2px 0 black;
+      margin-right:0.75rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="text-container">
+    Do you love me?
+  </div>
+  <div class="btn-container">
+    <button id="btn1" onclick="execute()" >Yes</button>
+    <button id="btn2" style="position: relative;"  onmousehover="change()" onclick="change()">No</button>
+  </div>
+  <script>
+    const btn2 = document.querySelector("#btn2");
+    const txt = document.querySelector(".text-container");
+    function change(){
+     var x = Math.floor(Math.random()*500);
+      btn2.style.left = x + "px";
+      btn2.style.top = x + "px";
+      btn2.style.right = x + "px";
+      btn2.style.bottom = x + "px";
+    }
+    function execute(){
+      txt.innerHTML = "I Love You too 💜!!";
+    }
+  </script>
+</body>
+
+</html>
